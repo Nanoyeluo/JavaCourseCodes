@@ -9,7 +9,7 @@ public class Count {
 
     public void get() {
 //        final ReentrantLock lock = new ReentrantLock();
-        try {
+        try{
             lock.lock();
             System.out.println(Thread.currentThread().getName() + " get begin");
             Thread.sleep(1000);

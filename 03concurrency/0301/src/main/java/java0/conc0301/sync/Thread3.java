@@ -40,11 +40,13 @@ public class Thread3 {
         final Thread3 myt3 = new Thread3();
         final Inner inner = myt3.new Inner();
         Thread t1 = new Thread(new Runnable() {
+            @Override
             public void run() {
                 myt3.m4t1(inner);
             }
         }, "t1");
         Thread t2 = new Thread(new Runnable() {
+            @Override
             public void run() {
                 myt3.m4t2(inner);
             }

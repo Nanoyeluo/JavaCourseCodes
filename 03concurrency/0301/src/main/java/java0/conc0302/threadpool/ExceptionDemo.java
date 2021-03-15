@@ -13,23 +13,23 @@ public class ExceptionDemo {
             Future<Double> future = executorService.submit(() -> {
                 throw new RuntimeException("executorService.submit()");
             });
-    
+
             double b = future.get();
             System.out.println(b);
-            
+
         } catch (Exception ex) {
             System.out.println("catch submit");
             ex.printStackTrace();
         }
         
-        try {
-            executorService.execute(() -> {
-                  throw new RuntimeException("executorService.execute()");
-                });
-        } catch (Exception ex) {
-            System.out.println("catch execute");
-            ex.printStackTrace();
-        }
+//        try {
+//            executorService.execute(() -> {
+//                  throw new RuntimeException("executorService.execute()");
+//                });
+//        } catch (Exception ex) {
+//            System.out.println("catch execute");
+//            ex.printStackTrace();
+//        }
         
         executorService.shutdown();
         System.out.println("Main Thread End!");

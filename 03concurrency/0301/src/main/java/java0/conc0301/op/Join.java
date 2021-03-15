@@ -15,7 +15,7 @@ public class Join {
                 if (i == 20) {
                     try {
                         oo.wait(0);
-                        //thread1.join();
+//                        thread1.join();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

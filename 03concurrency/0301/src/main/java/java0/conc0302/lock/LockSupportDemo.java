@@ -31,7 +31,7 @@ public class LockSupportDemo {
         Thread.sleep(3000L);
         t1.interrupt();
         LockSupport.unpark(t2);
-        t1.join();
-        t2.join();
+//        t1.join();
+//        t2.join();
     }
 }
